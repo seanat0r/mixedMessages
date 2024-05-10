@@ -42,4 +42,6 @@ let jokePart = {
     }
 };
 
+//add here dogJoke
+
 jokePart.sayTheJoke();
