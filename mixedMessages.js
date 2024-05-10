@@ -3,7 +3,8 @@ let jokePart = {
     foodList: ['pizza', 'burger', 'pasta', 'salad', 'sushi', 'steak', 'chicken curry', 'fish and chips', 'tacos', 'sandwich'],
     placeList: ['forest', 'city', 'mountains', 'beach', 'desert', 'countryside', 'lake', 'valley', 'glacier', 'plains'],
 
-    randomAnimalGenerator() {
+    //select random from 3 list 3 items and select again 3 items from those list to make the joke
+    generateRandomAnimals() {
         let holdAnimal = [];
         for (let i = 0; i < 3; ++i) {
             holdAnimal.push(this.animalList[Math.floor(Math.random() * this.animalList.length)]);
@@ -14,7 +15,7 @@ let jokePart = {
             return 'something went wrong.';
         };
     },
-    randomFoodList() {
+    generateRandomFoods() {
         let holdFood = [];
         for (let i = 0; i < 3; ++i) {
             holdFood.push(this.foodList[Math.floor(Math.random() * this.foodList.length)]);
@@ -25,7 +26,7 @@ let jokePart = {
             return 'something went wrong.';
         };
     },
-    randomPlaceList() {
+    generateRandomPlaces() {
         let holdPlace = [];
         for (let i = 0; i < 3; ++i) {
             holdPlace.push(this.placeList[Math.floor(Math.random() * this.placeList.length)]);
@@ -35,9 +36,10 @@ let jokePart = {
         } else {
             return 'something went wrong.';
         };
+    },
+    sayTheJoke() {
+        console.log(`"Why didn't the ${this.generateRandomAnimals()} go to eat ${this.generateRandomFoods()}? Because it prefers to hang out in the ${this.generateRandomPlaces()}`);
     }
 };
 
-
-
-console.log(jokePart.randomAnimalGenerator());
+jokePart.sayTheJoke();
