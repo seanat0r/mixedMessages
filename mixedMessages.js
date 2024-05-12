@@ -1,4 +1,4 @@
-let jokePart = {
+let animalJoke = {
     animalList: ['fish', 'dog', 'cat', 'bear', 'duck', 'lion', 'worm', 'bird', 'tiger', 'penguin'],
     foodList: ['pizza', 'burger', 'pasta', 'salad', 'sushi', 'steak', 'chicken curry', 'fish and chips', 'tacos', 'sandwich'],
     placeList: ['forest', 'city', 'mountains', 'beach', 'desert', 'countryside', 'lake', 'valley', 'glacier', 'plains'],
@@ -37,9 +37,116 @@ let jokePart = {
             return 'something went wrong.';
         };
     },
-    sayTheJoke() {
+    sayTheAnimalJoke() {
         console.log(`"Why didn't the ${this.generateRandomAnimals()} go to eat ${this.generateRandomFoods()}? Because it prefers to hang out in the ${this.generateRandomPlaces()}`);
     }
 };
 
-jokePart.sayTheJoke();
+//add here dogJoke
+let dogJoke = {
+    firstDog: ["Buddy", "Ato", "Bailey", "Charlie", "Lucy", "Daisy", "Rocky", "Molly", "Sadie", "Cooper"],
+    secondDog: ["Luna", "Ghost", "Bella", "Duke", "Rosie", "Oliver", "Lola", "Jack", "Coockie", "Toby"],
+    enviroment: ["Dog parks", "Beach", "Hiking trails", "Pet stores", "Veterinary clinics", "Dog-friendly cafes", "City streets", "Dog daycare centers", "Dog shows", "Family homes"],
+
+    generateRandomFirstDog () {
+        const holdFirstDog = [];
+        const randomValue = [];
+
+        for (i = 0; i < 5; i++) {
+            holdFirstDog.push(this.firstDog[Math.floor(Math.random() * this.firstDog.length)]);
+            randomValue.push(Math.floor(Math.random() * 20) + 1);
+        }
+        const randomSwitchCase = randomValue.reduce((a, b) => a * b) //multyplay all elemnts in the array
+
+        //checks which element of the array from holdFirstDog it should use, based of the product of randomValue.
+        if (randomSwitchCase > 0 && randomSwitchCase < 64000) {
+            return holdFirstDog[0];
+
+        } else if (randomSwitchCase > 64000 && randomSwitchCase < 128000) {
+            return holdFirstDog[1];
+
+        } else if (randomSwitchCase > 128000 && randomSwitchCase < 192000) {
+            return holdFirstDog[2];
+
+        } else if (randomSwitchCase > 192000 && randomSwitchCase < 256000) {
+            return holdFirstDog[3];
+
+        } else if (randomSwitchCase > 256000 && randomSwitchCase < 320000) {
+            return holdFirstDog[5];
+
+        } else {
+            return console.log(`The numbers are incorect! The Value of randomSwitchCase: ${randomSwitchCase} and the value of the array from randomValue is: ${randomValue}.`);
+        }
+    },
+
+    generateRandomSecondDog () {
+        const holdSecondDog = [];
+        const randomValue = [];
+
+        for (i = 0; i < 5; i++) {
+            holdSecondDog.push(this.secondDog[Math.floor(Math.random() * this.secondDog.length)]);
+            randomValue.push(Math.floor(Math.random() * 20) + 1);
+        }
+        const randomSwitchCase = randomValue.reduce((a, b) => a * b) //multyplay all elemnts in the array
+
+        //checks which element of the array from holdSecondDog it should use, based of the product of randomValue.
+        if (randomSwitchCase > 0 && randomSwitchCase < 64000) {
+            return holdSecondDog[0];
+
+        } else if (randomSwitchCase > 64000 && randomSwitchCase < 128000) {
+            return holdSecondDog[1];
+
+        } else if (randomSwitchCase > 128000 && randomSwitchCase < 192000) {
+            return holdSecondDog[2];
+
+        } else if (randomSwitchCase > 192000 && randomSwitchCase < 256000) {
+            return holdSecondDog[3];
+
+        } else if (randomSwitchCase > 256000 && randomSwitchCase < 320000) {
+            return holdSecondDog[5];
+
+        } else {
+            return console.log(`The numbers are incorect! The Value of randomSwitchCase: ${randomSwitchCase} and the value of the array from randomValue is: ${randomValue}.`);
+        }
+    },
+
+    generateRandomEnviroment () {
+        const holdEnviroment = [];
+        const randomValue = [];
+
+        for (i = 0; i < 5; i++) {
+            holdEnviroment.push(this.enviroment[Math.floor(Math.random() * this.enviroment.length)]);
+            randomValue.push(Math.floor(Math.random() * 20) + 1);
+        }
+        const randomSwitchCase = randomValue.reduce((a, b) => a * b) //multyplay all elemnts in the array
+
+        //checks which element of the array from holdEnviroment it should use, based of the product of randomValue.
+        if (randomSwitchCase > 0 && randomSwitchCase < 64000) {
+            return holdEnviroment[0];
+
+        } else if (randomSwitchCase > 64000 && randomSwitchCase < 128000) {
+            return holdEnviroment[1];
+
+        } else if (randomSwitchCase > 128000 && randomSwitchCase < 192000) {
+            return holdEnviroment[2];
+
+        } else if (randomSwitchCase > 192000 && randomSwitchCase < 256000) {
+            return holdEnviroment[3];
+
+        } else if (randomSwitchCase > 256000 && randomSwitchCase < 320000) {
+            return holdEnviroment[5];
+
+        } else {
+            return console.log(`The numbers are incorect! The Value of randomSwitchCase: ${randomSwitchCase} and the value of the array from randomValue is: ${randomValue}.`);
+        }
+    },
+
+    sayTheDogJoke () {
+        return console.log(`Why did the dogs ${this.generateRandomFirstDog()} and ${this.generateRandomSecondDog()} refuse to go to the ${this.generateRandomEnviroment()} ? Because they heard it was "ruff" out there!`);
+    }
+
+}
+
+
+dogJoke.sayTheDogJoke();
+animalJoke.sayTheAnimalJoke();
