@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-let animalJoke = {
-=======
 //retailJoke here
 let retailJoke = {
     partOne: ["'How can I help you?', say the saleperson", "'What can I do for you?', say the saleperson"],
@@ -58,8 +55,7 @@ let retailJoke = {
     
 }
 
-let jokePart = {
->>>>>>> retailJoke2.0
+let animalJoke = {
     animalList: ['fish', 'dog', 'cat', 'bear', 'duck', 'lion', 'worm', 'bird', 'tiger', 'penguin'],
     foodList: ['pizza', 'burger', 'pasta', 'salad', 'sushi', 'steak', 'chicken curry', 'fish and chips', 'tacos', 'sandwich'],
     placeList: ['forest', 'city', 'mountains', 'beach', 'desert', 'countryside', 'lake', 'valley', 'glacier', 'plains'],
@@ -103,7 +99,6 @@ let jokePart = {
     }
 };
 
-<<<<<<< HEAD
 //add here dogJoke
 let dogJoke = {
     firstDog: ["Buddy", "Ato", "Bailey", "Charlie", "Lucy", "Daisy", "Rocky", "Molly", "Sadie", "Cooper"],
@@ -212,7 +207,4 @@ let dogJoke = {
 
 dogJoke.sayTheDogJoke();
 animalJoke.sayTheAnimalJoke();
-=======
-jokePart.sayTheJoke();
 retailJoke.sayTheRetailJoke();
->>>>>>> retailJoke2.0
