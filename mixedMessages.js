@@ -1,4 +1,14 @@
-//retailJoke here
+const whichJoke = () => {
+    let generateRandomWhichJoke = Math.floor(Math.random() * 100) + 1);
+    if (generateRandomWhichJoke < 30) {
+        retailJoke.sayTheRetailJoke();
+    } else if (generateRandomWhichJoke < 60){
+        dogJoke.sayTheDogJoke();
+    } else {
+        animalJoke.sayTheAnimalJoke();
+    }
+};
+
 let retailJoke = {
     partOne: ["'How can I help you?', say the saleperson", "'What can I do for you?', say the saleperson"],
     partTwo: ["'I'm searching for a gun.' says the custommer", "'I'm looking for a money', say the custommer", "'I'm  want a body, can you help me?', say the custommer"],
