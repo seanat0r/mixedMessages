@@ -1,11 +1,11 @@
 const whichJoke = () => {
-    let generateRandomWhichJoke = Math.floor(Math.random() * 100) + 1);
+    let generateRandomWhichJoke = Math.floor(Math.random() * 100) + 1; //generate a random number from 1-100
     if (generateRandomWhichJoke < 30) {
-        retailJoke.sayTheRetailJoke();
+        retailJoke.sayTheRetailJoke(); // 30% chance
     } else if (generateRandomWhichJoke < 60){
-        dogJoke.sayTheDogJoke();
+        dogJoke.sayTheDogJoke();  // 30% chance
     } else {
-        animalJoke.sayTheAnimalJoke();
+        animalJoke.sayTheAnimalJoke(); // 40% chance
     }
 };
 
@@ -63,7 +63,7 @@ let retailJoke = {
         return console.log(this.generateRandomPartOne() + ' ' + this.generateRandomPartTwo() + ' ' + this.generateRandomPartThree());
     }
     
-}
+};
 
 let animalJoke = {
     animalList: ['fish', 'dog', 'cat', 'bear', 'duck', 'lion', 'worm', 'bird', 'tiger', 'penguin'],
@@ -109,7 +109,6 @@ let animalJoke = {
     }
 };
 
-//add here dogJoke
 let dogJoke = {
     firstDog: ["Buddy", "Ato", "Bailey", "Charlie", "Lucy", "Daisy", "Rocky", "Molly", "Sadie", "Cooper"],
     secondDog: ["Luna", "Ghost", "Bella", "Duke", "Rosie", "Oliver", "Lola", "Jack", "Coockie", "Toby"],
@@ -119,7 +118,7 @@ let dogJoke = {
         const holdFirstDog = [];
         const randomValue = [];
 
-        for (i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
             holdFirstDog.push(this.firstDog[Math.floor(Math.random() * this.firstDog.length)]);
             randomValue.push(Math.floor(Math.random() * 20) + 1);
         }
@@ -150,7 +149,7 @@ let dogJoke = {
         const holdSecondDog = [];
         const randomValue = [];
 
-        for (i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
             holdSecondDog.push(this.secondDog[Math.floor(Math.random() * this.secondDog.length)]);
             randomValue.push(Math.floor(Math.random() * 20) + 1);
         }
@@ -181,7 +180,7 @@ let dogJoke = {
         const holdEnviroment = [];
         const randomValue = [];
 
-        for (i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
             holdEnviroment.push(this.enviroment[Math.floor(Math.random() * this.enviroment.length)]);
             randomValue.push(Math.floor(Math.random() * 20) + 1);
         }
@@ -211,10 +210,7 @@ let dogJoke = {
     sayTheDogJoke () {
         return console.log(`Why did the dogs ${this.generateRandomFirstDog()} and ${this.generateRandomSecondDog()} refuse to go to the ${this.generateRandomEnviroment()} ? Because they heard it was "ruff" out there!`);
     }
+    
+};
 
-}
-
-
-dogJoke.sayTheDogJoke();
-animalJoke.sayTheAnimalJoke();
-retailJoke.sayTheRetailJoke();
+whichJoke();
